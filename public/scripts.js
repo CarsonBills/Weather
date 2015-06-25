@@ -12,6 +12,7 @@ function fetchMenuItem(){
 		data : {city: input_city},
 		success: function(data){
 			var header = "<p> Forecast for the next five days: </p>"
+			$(".forecast").empty()
 			$(".forecast").append(header, data);
 		}
 	});
