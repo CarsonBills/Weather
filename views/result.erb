@@ -1,0 +1,33 @@
+
+
+<p> City: 
+<div class="city"><%= @current_data["city"]["name"] %></div>
+</p>
+
+<p> Description:
+<%= @current_data["list"][0]["weather"][0]["description"] %>
+</p>
+
+<p> Current Temperature:
+<%= (@current_data["list"][0]["main"]["temp"] - 273.15).round%>
+</p>
+
+<p> Humidity: 
+<%= @current_data["list"][0]["main"]["humidity"] %>
+</p>
+
+<div class="forecast_button">
+</div>
+
+<div class="forecast">
+</div>
+
+<script>
+
+	$(function(){
+
+		clickForecastButton();
+
+	});
+
+</script>
